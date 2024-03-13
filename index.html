@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Frontend Mentor | Blogr Landing Page</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+			}
+
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+
+			.attribution .author {
+				position: relative;
+				color: hsl(228, 45%, 44%);
+			}
+
+			.author:hover {
+				color: white;
+			}
+
+			.author::before {
+				content: "";
+				position: absolute;
+				top: -3px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: white;
+
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.3s ease-in;
+			}
+
+			.author:hover::before {
+				transform: scaleX(1);
+				transform-origin: right;
+			}
+
+			.author::after {
+				content: "";
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: white;
+
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform 0.3s ease-in;
+			}
+
+			.author:hover::after {
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="navbar-container">
+					<div class="first-navbar-container">
+						<div class="logo-container">
+							<img src="./images/logo.svg" alt="" />
+						</div>
+						<div class="first-navbar">
+							<div class="product" id="product">
+								<div class="product-body">
+									<a href="#">Product</a>
+									<div class="arrows">
+										<img src="./white-arrow-down.svg" alt="" class="arrow-down" id="product-arrow-down" />
+										<img src="./white-arrow-up.svg" alt="" class="arrow-up" id="product-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="product-dropdown" id="product-dropdown">
+									<a href="">Overview</a>
+									<a href="">Pricing</a>
+									<a href="">Marketplace</a>
+									<a href="">Features</a>
+									<a href="">Integrations</a>
+								</div>
+							</div>
+							<div class="company" id="company">
+								<div class="company-body">
+									<a href="#">Company</a>
+									<div class="arrows">
+										<img src="./white-arrow-down.svg" alt="" id="company-arrow-down" />
+										<img src="./white-arrow-up.svg" alt="" id="company-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="company-dropdown" id="company-dropdown">
+									<a href="">About</a>
+									<a href="">Team</a>
+									<a href="">Blog</a>
+									<a href="">Careers</a>
+								</div>
+							</div>
+							<div class="connect" id="connect">
+								<div class="connect-body">
+									<a href="#">Connect</a>
+									<div class="arrows">
+										<img src="./white-arrow-down.svg" alt="" id="connect-arrow-down" />
+										<img src="./white-arrow-up.svg" alt="" id="connect-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="connect-dropdown" id="connect-dropdown">
+									<a href="">Contact</a>
+									<a href="">Newsletter</a>
+									<a href="">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="second-navbar-container">
+						<div class="second-navbar">
+							<a href="" class="login">Login</a>
+							<button>Sign Up</button>
+						</div>
+						<div class="mobile-menu-container">
+							<img src="./images/icon-hamburger.svg" alt="" id="hamburger-menu" />
+							<img src="./images/icon-close.svg" alt="" id="close-menu" hidden />
+						</div>
+					</div>
+				</div>
+				<!-- MOBILE NAVBAR -->
+				<div class="mobile-navbar-container" id="mobile-navbar-container">
+					<div class="mobile-first-navbar-container">
+						<div class="mobile-first-navbar">
+							<div class="mobile-product" id="mobile-product">
+								<div class="mobile-product-body">
+									<a href="#">Product</a>
+									<div class="arrows">
+										<img src="./dark-arrow-down.svg" alt="" class="arrow-down" id="mobile-product-arrow-down" />
+										<img src="./dark-arrow-up.svg" alt="" class="arrow-up" id="mobile-product-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="mobile-product-dropdown" id="mobile-product-dropdown">
+									<a href="">Overview</a>
+									<a href="">Pricing</a>
+									<a href="">Marketplace</a>
+									<a href="">Features</a>
+									<a href="">Integrations</a>
+								</div>
+							</div>
+							<div class="mobile-company" id="mobile-company">
+								<div class="mobile-company-body">
+									<a href="#">Company</a>
+									<div class="arrows">
+										<img src="./dark-arrow-down.svg" alt="" id="mobile-company-arrow-down" />
+										<img src="./dark-arrow-up.svg" alt="" id="mobile-company-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="mobile-company-dropdown" id="mobile-company-dropdown">
+									<a href="">About</a>
+									<a href="">Team</a>
+									<a href="">Blog</a>
+									<a href="">Careers</a>
+								</div>
+							</div>
+							<div class="mobile-connect" id="mobile-connect">
+								<div class="mobile-connect-body">
+									<a href="#">Connect</a>
+									<div class="arrows">
+										<img src="./dark-arrow-down.svg" alt="" id="mobile-connect-arrow-down" />
+										<img src="./dark-arrow-up.svg" alt="" id="mobile-connect-arrow-up" hidden />
+									</div>
+								</div>
+								<div class="mobile-connect-dropdown" id="mobile-connect-dropdown">
+									<a href="">Contact</a>
+									<a href="">Newsletter</a>
+									<a href="">LinkedIn</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="mobile-second-navbar-container">
+						<div class="mobile-second-navbar">
+							<a href="">Login</a>
+							<button>Sign Up</button>
+						</div>
+					</div>
+				</div>
+				<div class="text-container">
+					<div class="text">
+						<h1>A modern publishing platform</h1>
+						<p>Grow your audience and build your online brand</p>
+					</div>
+					<div class="button-container">
+						<button class="first-button">Start for Free</button>
+						<button class="second-button">Learn More</button>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="first-section">
+					<h2>Designed for the future</h2>
+					<div class="first-section-body">
+						<div class="text-container">
+							<div class="first-text">
+								<h3>Introducing an extensible editor</h3>
+								<p>
+									Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The
+									editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and
+									Markdown. Extensibility with plugins and themes provide easy ways ti add functionality or change the looks of a
+									blog.
+								</p>
+							</div>
+							<div class="second-text">
+								<h3>Robust content management</h3>
+								<p>
+									Flexible content management enables users to easily move through posts. Increase the usability of your blog by
+									adding customized categories, sections, format, or flow. With this functionality you're in full control.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="second-section">
+					<div class="image-container">
+						<img src="./images/illustration-phones.svg" alt="" />
+					</div>
+					<div class="text-container">
+						<h2>State of the Art Infrastructure</h2>
+						<p>
+							With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This
+							ensures your side will load instantly, no matter where your readers are, keeping your site competitive.
+						</p>
+					</div>
+				</div>
+				<div class="third-section">
+					<div class="text-container">
+						<div class="text">
+							<div class="first-text">
+								<h3>Free, open, simple</h3>
+								<p>
+									Blogr is a free and open source application backed by a large community of helpful developers. It supports
+									features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+									and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+								</p>
+							</div>
+							<div class="second-text">
+								<h3>Powerful tooling</h3>
+								<p>
+									Batteries included. We build a simple and straightforward CLI tool that makes customization and deployment a
+									breeze, but capable of producing even the most complicated sites.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div class="top-row">
+					<div class="logo-container">
+						<img src="./images/logo.svg" alt="" />
+					</div>
+					<div class="first-col">
+						<a href="">Product</a>
+						<div class="first-col-body">
+							<a href="">Overview</a>
+							<a href="">Pricing</a>
+							<a href="">Marketplace</a>
+							<a href="">Features</a>
+							<a href="">Integrations</a>
+						</div>
+					</div>
+					<div class="second-col">
+						<a href="">Company</a>
+						<div class="second-col-body">
+							<a href="">About</a>
+							<a href="">Team</a>
+							<a href="">Blog</a>
+							<a href="">Careers</a>
+						</div>
+					</div>
+					<div class="third-col">
+						<a href="">Connect</a>
+						<div class="third-col-body">
+							<a href="">Contact</a>
+							<a href="">Newsletter</a>
+							<a href="">LinkedIn</a>
+						</div>
+					</div>
+				</div>
+				<div class="attribution">
+					Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+					<a href="https://github.com/kevinebenhezer" class="author">Kevin Ebenhezer</a>.
+				</div>
+			</footer>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
